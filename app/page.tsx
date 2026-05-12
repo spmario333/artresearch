@@ -8,7 +8,7 @@ export default function Home() {
   return (
    <div>
     <h1>Prueba</h1>
-    <p>{JSON.stringify(data)}</p>
+    <p>{data}</p>
    </div>
   );
 }
