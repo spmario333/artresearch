@@ -1,6 +1,9 @@
+import { ArtContext } from "@/context/artContext";
+import { useContext } from "react";
+
 export const getArt = async (criterio: string) => {
     
-    
+    const {setData}= useContext(ArtContext)
     const url = `https://api.artsearch.io/artworks?query=${criterio}&number=1`;
     const apiKey = 'e43f204920dc4a98ada473da8e42ff2f';
 
@@ -16,6 +19,7 @@ export const getArt = async (criterio: string) => {
     }
 
     const data = await response.json();
+    setData(data.artworks)
 
     return data;
 }
