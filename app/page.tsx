@@ -1,14 +1,15 @@
-import { getArt } from "@/API/fetch";
+// import { getArt } from "@/API/fetch";
+import { ArtsCards } from "@/components/ArtsCards";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
 
-  const data = getArt('Noche Estrellada')
+  // const data = await getArt('Noche Estrellada')
+  // console.log(data)
 
   return (
-   <div>
-    <h1>Prueba</h1>
-    <p>{data}</p>
-   </div>
+    <div>
+      <ArtsCards/>
+    </div>
   );
 }
