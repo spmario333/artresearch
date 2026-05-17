@@ -1,16 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
-interface Props {
-    
-      id: number,
-      title: string,
-      image: string
-    
+interface Artwork {
+  id: number;
+  title: string;
+  image?: string;
 }
 
 
 
-export const SimpleCard = (props:Props) => {
+export const SimpleCard = (props:Artwork) => {
   return (
     <div className='pb-2.5'>
 
@@ -19,7 +17,7 @@ export const SimpleCard = (props:Props) => {
         className='w-5/12 h-auto'
         width={400}
         height={400}
-        src={props.image}  
+        src={props.image || ""}  
         loading='eager'
         alt={props.title}      
         />
