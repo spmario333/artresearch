@@ -1,15 +1,17 @@
 // next.config.ts
 import type { NextConfig } from "next";
+import { hostname } from "os";
 
 const nextConfig: NextConfig = {
-  async rewrites() {
-    return [
+  images: {
+    remotePatterns: [
       {
-        source: '/api/artsearch/:path*',
-        destination: 'https://api.artsearch.io/:path*',
-      },
-    ];
-  },
+        protocol: 'https',
+        hostname: 'img.artsearch.io'
+      }
+    ]
+  }
+  
 };
 
 export default nextConfig;
