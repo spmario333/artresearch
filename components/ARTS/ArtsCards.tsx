@@ -3,6 +3,7 @@
 import { useArt } from "@/context/artContext";
 import { SimpleCard } from "./SimpleCard";
 
+
 export const ArtsCards = () => {
   const { artworks, isLoading, error } = useArt();
 

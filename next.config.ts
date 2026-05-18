@@ -6,12 +6,10 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'img.artsearch.io'
-      }
-    ]
-  }
-  
+        protocol: "https",
+        hostname: "img.artsearch.io",
+      },
+    ],
+  },
 };
-
 export default nextConfig;
