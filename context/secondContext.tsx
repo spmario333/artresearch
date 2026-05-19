@@ -4,9 +4,18 @@ import { sndFetch } from "@/fetch/sndFetch";
 import { createContext, ReactNode, useContext, useState } from "react";
 
 interface data {
-    data: []
-}
+    artist_name: string,
+    artist_href: string,
+    source_url: string,
+    url: string,
+    dimensions: dimensions
+     
 
+}
+    interface dimensions{
+        width: number,
+        height : number
+    } 
 
 
 
@@ -33,8 +42,9 @@ export const SndProvider = ({ children }: { children: ReactNode }) => {
         setLoading(true)
         setErr(null)
         try {
-            const result = await sndFetch(query)
-            setData(result)
+            const data = await sndFetch(query)
+            console.log(data)
+            setData(data)
 
         } catch (err: any) {
             setErr(err.message)

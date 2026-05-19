@@ -1,27 +1,14 @@
-export const result = {
-  available: 422,
-  number: 1,
-  offset: 0,
-  artworks: [
+const result = {
+  "results": [
     {
-      id: 25187851,
-      title: 'Landscape at Nightfall',
-      image: "/4.jpg"
-    },
-    {
-      id: 25187852,
-      title: 'Landscape at Nightfall',
-      image: "/3.jpg"
-    },
-    {
-      id: 25187853,
-      title: 'Landscape at Nightfall',
-      image: "/2.jpg"
-    },
-    {
-      id: 25187854,
-      title: 'Landscape at Nightfall',
-      image: "/1.jpg"
+      "artist_name": "aoi",
+      "artist_href": "https://www.pixiv.net/en/users/96230382",
+      "source_url": "https://www.pixiv.net/en/artworks/117829271",
+      "url": "https://nekos.best/api/v2/neko/3069a953-b9d7-409b-9e07-980bd5dc85fa.png",
+      "dimensions": {
+        "width": 2894,
+        "height": 4000
+      }
     }
   ]
 }

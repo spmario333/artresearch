@@ -1,6 +1,6 @@
 export async function fetchArtworks(
   query: string,
-  number: number = 5
+  number: number = 15
 ) {
   const response = await fetch(
     `/api/artworks?query=${query}&number=${number}`
@@ -12,5 +12,5 @@ export async function fetchArtworks(
 
   const data = await response.json();
 
-  return data.artworks || [];
+  return data.artworks ;
 }

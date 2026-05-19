@@ -27,7 +27,7 @@ export function ArtProvider({ children }: { children: ReactNode }) {
     setIsLoading(true);
     setError(null);
     try {
-     const result = await fetchArtworks(query, 1)
+     const result = await fetchArtworks(query, 10)
      setArtworks(result) 
      
     } catch (err: any) {
